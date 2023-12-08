@@ -17,7 +17,7 @@ module.exports = {
   ]
 }
 ```
-4. Add the following code in **package.json** bellow **devDependencies** object: 
+5. Add the following code in **package.json** bellow **devDependencies** object: 
 ```json
 "jest": {
     "testEnvironment": "jsdom",
@@ -30,4 +30,4 @@ module.exports = {
     ]
   }
 ```
-1. Add tests and run them with `npm test`
+6. Add tests and run them with `npm test`
