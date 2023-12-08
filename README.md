@@ -2,7 +2,7 @@
 
 1. Install the dependancies:
 ```
-npm i -D jest @babel/preset-env @babel/preset-react @testing-library/react @testing-library/jest-dom jest-svg-transformer identity-obj-proxy jest-environment-jsdom
+npm i -D jest @babel/preset-env @babel/preset-react @testing-library/react @testing-library/jest-dom jest-svg-transformer identity-obj-proxy jest-environment-jsdom @types/jest
 ```
 2. Add the following to the **.eslintrc.cjs** with this: 
 ```js
