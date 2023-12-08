@@ -20,7 +20,11 @@ module.exports = {
   ]
 }
 ```
-5. Add the following code in **package.json** bellow **devDependencies** object: 
+5. Add **setupTests.js** to root directory with the following code:
+```js
+import '@testing-library/jest-dom';
+```
+6. Add the following code in **package.json** bellow **devDependencies** object: 
 ```json
 "jest": {
     "testEnvironment": "jsdom",
@@ -33,4 +37,4 @@ module.exports = {
     ]
   }
 ```
-6. Add tests and run them with `npm test`
+7. Add tests and run them with `npm test`
