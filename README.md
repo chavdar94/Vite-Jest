@@ -4,10 +4,16 @@
 ```
 npm i -D jest @babel/preset-env @babel/preset-react @testing-library/react @testing-library/jest-dom jest-svg-transformer identity-obj-proxy jest-environment-jsdom
 ```
-2. Change **.eslintrc.cjs** with this: 
+2. Add the following to the **.eslintrc.cjs** with this: 
 ```js
 module.exports = {
-  extends: ["react-app", "react-app/jest"],
+  ...
+  extends: [
+    ...,
+    "react-app", 
+    "react-app/jest"
+    ],
+  ...
 };
 ```
 3. Add `"test": "jest"` to **package.json** - **scripts**
