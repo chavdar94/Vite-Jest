@@ -1,8 +1,24 @@
-# React + Vite
+# React + Vite + Jest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Install the dependancies: `npm i -D jest @babel/preset-env @babel/preset-react @testing-library/react @testing-library/jest-dom jest-svg-transformer identity-obj-proxy jest-environment-jsdom`
+2. Change **.eslintrc.cjs** with this: ```module.exports = {
+  extends: ["react-app", "react-app/jest"],
+};```
+3. Add `"test": "jest"` to **package.json** - **scripts**
+4. Create `.babelrc` file in the root directory with this inside: ```{
+  "presets": [
+    "@babel/preset-env",
+    ["@babel/preset-react", { "runtime": "automatic" }]
+  ]
+}```
+5. Add the following code in **package.json** bellow **devDependencies** object: ```"jest": {
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "^.+\\.svg$": "jest-svg-transformer",
+      "^.+\\.(css|less|scss)$": "identity-obj-proxy"
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
+    ]
+  }```
+6. Add tests and run them with `npm test`
