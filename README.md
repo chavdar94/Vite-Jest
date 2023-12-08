@@ -1,7 +1,10 @@
 # React + Vite + Jest
 
-1. Install the dependancies: `npm i -D jest @babel/preset-env @babel/preset-react @testing-library/react @testing-library/jest-dom jest-svg-transformer identity-obj-proxy jest-environment-jsdom`
-1. Change **.eslintrc.cjs** with this: 
+1. Install the dependancies:
+```
+npm i -D jest @babel/preset-env @babel/preset-react @testing-library/react @testing-library/jest-dom jest-svg-transformer identity-obj-proxy jest-environment-jsdom
+```
+2. Change **.eslintrc.cjs** with this: 
 ```js
 module.exports = {
   extends: ["react-app", "react-app/jest"],
